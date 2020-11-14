@@ -48,7 +48,9 @@ if __name__ == '__main__':
     parser.add_argument('from_structure', help='Regex expression describing the structure of the files')
     parser.add_argument('to_dir', help='The dir to copy to')
     parser.add_argument('to_structure', help='Expression with $N describing the inputs')
-    args = parser.parse_args()
+    args = vars(parser.parse_args())
+    args['from_dir'] = pathlib.Path(args['from_dir'])
+    args['to_dir'] = pathlib.Path(args['to_dir'])
     lndir(args)
 
 
