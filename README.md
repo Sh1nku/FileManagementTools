@@ -23,7 +23,7 @@ Given a directory structure
   * SeriesName_S01E02.mkv
   * SeriesName_S02E01.mkv
 ```
-./lndir.py -s /SeriesName S(\d{2})E(\d{2}) /NewLocation/S{^1}/SeriesName_S{^1}E{^2}.mkv
+./lndir.py -s /SeriesName "S(\d{2})E(\d{2})" /NewLocation/S{^1}/SeriesName_S{^1}E{^2}.mkv
 ```
 will create a structure like this
 * /NewLocation
